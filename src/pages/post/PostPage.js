@@ -1,8 +1,8 @@
-import React, {useContext} from "react"
+import React, {useContext, useEffect} from "react"
 import {Context} from "../../context/Context";
 import {NavLink} from "react-router-dom";
-import '../../spinner.css'
 import Comments from "../../components/Comments";
+import Spinner from "../../components/Spinner";
 
 const PostPage = ({match}) => {
     const {posts, comments, users} = useContext(Context)
@@ -12,14 +12,17 @@ const PostPage = ({match}) => {
     const post = posts.find(el => el.id === +id)
     const user = users.find(el => el.id === post.userId)
     const comment = comments.filter(el => el.postId === +id)
-    console.log("user", user)
+    // console.log("user", user)
     // console.log("post", post)
     // console.log("comment", comment)
+    useEffect(()=>{
+
+    },[])
     return (
         <div>
             {
                 user && post && comment ?
-                    <div>
+                    <div className='post-page-container'>
                         <h2>{post.title}</h2>
                         <NavLink to={`/user/${user.id}`}>
                             <h2>{user.name}</h2>
@@ -28,10 +31,7 @@ const PostPage = ({match}) => {
                         <h2>{post.body}</h2>
                         <Comments comments={comment}/>
                     </div>
-                    : <div className="lds-ripple">
-                        <div/>
-                        <div/>
-                    </div>
+                    : <Spinner />
             }
 
         </div>

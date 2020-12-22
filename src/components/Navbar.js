@@ -3,8 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = ()=>{
     return (
-        <header>
-            <nav>
+            <nav className='nav-container'>
                 <ul>
                     <li>
                         <NavLink to='/' >
@@ -13,7 +12,6 @@ const Navbar = ()=>{
                     </li>
                 </ul>
             </nav>
-        </header>
     )
 }
 export default Navbar

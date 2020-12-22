@@ -1,18 +1,14 @@
 import React, {useContext}  from "react"
 import Post from "./Post";
-import '../spinner.css'
-import {Context} from "../context/Context";
+import Spinner from "./Spinner";
 
-const Posts = () => {
-    const {posts} = useContext(Context)
+const Posts = ({posts}) => {
     return (
         <div className='post-container'>
             {
                 posts.length === 0 ?
-                    <div className="lds-ripple">
-                        <div/>
-                        <div/>
-                    </div> :
+                    <Spinner />
+                    :
                     posts.map(({id,title}) => {
                         return <Post key={id} title={title} id={id}/>
                     })

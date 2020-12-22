@@ -8,7 +8,13 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .main-container{
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
+}
+.main-page{
+}
+/* NAVBAR */
+.nav-container{
+    border-bottom: 1px solid black;
 }
 /* POSTS */
 .post-container{
@@ -34,10 +40,21 @@ body{
 .post .read-more{
     height: 30px;
 }
+/* POST PAGE */
+.post-page-container{
+    width: 94%;
+    margin: auto;
+}
 /* COMMENT SECTION */
 .comment-container{
     border: 1px solid blue;
 }
 .comment{
     border: 1px solid red;
+}
+/* FOOTER */
+.footer{
+    height: 50px;
+    border-top: 1px solid black;
+    margin-top: 30px;
 }
