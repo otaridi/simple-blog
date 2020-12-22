@@ -1,20 +1,19 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext} from "react"
 import {Context} from "../../context/Context";
 import {NavLink} from "react-router-dom";
 import Comments from "../../components/Comments";
 import Spinner from "../../components/Spinner";
 
 const PostPage = ({match}) => {
-    const {posts, comments, users} = useContext(Context)
+    const {posts, comments, users, randomImage} = useContext(Context)
+    // id form url
     const {id} = match.params
-
-    const image = `https://picsum.photos/id/${id}/200`
+    // current post
     const post = posts.find(el => el.id === +id)
+    // current post's user
     const user = users.find(el => el.id === post.userId)
+    // current posts comments
     const comment = comments.filter(el => el.postId === +id)
-    // console.log("user", user)
-    // console.log("post", post)
-    // console.log("comment", comment)
 
     return (
         <div>
@@ -22,10 +21,10 @@ const PostPage = ({match}) => {
                 user && post && comment ?
                     <div className='post-page-container'>
                         <h2>{post.title}</h2>
-                        <NavLink to={`/user/${user.id}`}>
+                        <NavLink to={{pathname:`/user/${user.id}`, imageId:{id}}}>
                             <h2>{user.name}</h2>
                         </NavLink>
-                        <img src={image} alt="post"/>
+                        <img src={randomImage(id)} alt="post"/>
                         <h2>{post.body}</h2>
                         <Comments comments={comment}/>
                     </div>

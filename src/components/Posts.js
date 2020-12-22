@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from "react"
+import React, {useState} from "react"
 import Post from "./Post";
 import Spinner from "./Spinner";
 
@@ -7,6 +7,7 @@ const Posts = ({posts}) => {
 
     const postCount = posts.slice(0, currentPosts)
 
+    // render first 12 post
     const renderPosts = postCount.map(({id, title}) => {
         return <Post key={id} title={title} id={id}/>
     })
@@ -19,7 +20,6 @@ const Posts = ({posts}) => {
                         : renderPosts
                 }
             </div>
-
             {
                 currentPosts >= posts.length ? null
                     :

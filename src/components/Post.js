@@ -1,15 +1,16 @@
-import React from "react"
+import React, {useContext} from "react"
 import {NavLink} from "react-router-dom";
+import {Context} from "../context/Context";
 
 const Post = ({title, id})=>{
+    const {randomImage} = useContext(Context)
 
-    const image = `https://picsum.photos/id/${id}/200`
     return (
         <div className='post'>
             <section className='title'>
                 <h3>{title.substr(0,30)}</h3>
             </section>
-            <img src={image} alt="post" className='post-image'/>
+            <img src={randomImage(id)} alt="post" className='post-image'/>
             <section className='read-more'>
                 <NavLink to={`/post/${id}`} >
                     <button>read more</button>

@@ -4,7 +4,6 @@ import {Context} from "../../context/Context";
 
 const MainPage = ()=>{
     const {posts} = useContext(Context)
-
     return (
         <div className='main-page'>
             <Posts posts={posts}/>

@@ -2,7 +2,7 @@ import React from "react"
 import '../spinner.css'
 
 const Spinner = () => (
-        <div className="lds-ripple">
+        <div className="spinner">
             <div/>
             <div/>
         </div>

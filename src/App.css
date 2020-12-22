@@ -74,6 +74,19 @@ body{
 .user-page-container{
     padding-top: 100px;
 }
+.user-page-container div > h2{
+    text-align: center;
+    margin:50px 0 0 0;
+}
+.user-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.user-image{
+    display: block;
+}
 /* COMMENT SECTION */
 .comment-container{
     border: 1px solid blue;
