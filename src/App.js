@@ -7,14 +7,14 @@ import UserPage from "./pages/user/UserPage";
 import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-        <Route path='/' exact component={MainPage} />
-        <Route path='/post/:id' exact component={PostPage} />
-        <Route path='/user/:id' exact component={UserPage} />
-    </div>
-  );
+    return (
+        <div className='main-container'>
+            <Navbar/>
+            <Route path='/' exact component={MainPage}/>
+            <Route path='/post/:id' exact component={PostPage}/>
+            <Route path='/user/:id' exact component={UserPage}/>
+        </div>
+    );
 }
 
 export default App;

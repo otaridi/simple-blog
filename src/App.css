@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.main-container{
+    border: 1px solid gray;
+}
+/* POSTS */
+.post-container{
+    width: 94%;
+    margin: auto;
+    border: 1px solid blue;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+}
+.post{
+    border: 1px solid red;
+}
+.post .title{
+    height: 50px;
+}
