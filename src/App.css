@@ -14,15 +14,30 @@ body{
 .post-container{
     width: 94%;
     margin: auto;
-    border: 1px solid blue;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 20px;
 }
 .post{
-    border: 1px solid red;
+    border: 1px solid #a5a0a0;
 }
 .post .title{
     height: 50px;
+    text-align: center;
+}
+.post .post-image{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.post .read-more{
+    height: 30px;
+}
+/* COMMENT SECTION */
+.comment-container{
+    border: 1px solid blue;
+}
+.comment{
+    border: 1px solid red;
 }
