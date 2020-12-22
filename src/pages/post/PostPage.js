@@ -15,9 +15,7 @@ const PostPage = ({match}) => {
     // console.log("user", user)
     // console.log("post", post)
     // console.log("comment", comment)
-    useEffect(()=>{
 
-    },[])
     return (
         <div>
             {

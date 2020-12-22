@@ -2,6 +2,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -14,19 +15,29 @@ body{
 }
 /* NAVBAR */
 .nav-container{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #aca8a8;
+    position: fixed;
+    width: 100%;
+    background-color: #cdc3c3;
+}
+.nav-container ul li{
+    list-style: none;
+}
+.nav-container ul li a{
+    text-decoration: none;
 }
 /* POSTS */
 .post-container{
-    width: 94%;
+    width: 90%;
+    padding-top: 100px;
     margin: auto;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 .post{
-    border: 1px solid #a5a0a0;
+    border: 1px solid #bebaba;
 }
 .post .title{
     height: 50px;
@@ -40,10 +51,28 @@ body{
 .post .read-more{
     height: 30px;
 }
+.load-more{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+.load-more button {
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid #d7d4d4;
+    outline: none;
+}
 /* POST PAGE */
 .post-page-container{
     width: 94%;
     margin: auto;
+    padding-top: 100px;
+}
+/* USER PAGE CONTAINER*/
+.user-page-container{
+    padding-top: 100px;
 }
 /* COMMENT SECTION */
 .comment-container{

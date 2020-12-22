@@ -7,7 +7,6 @@ const MainPage = ()=>{
 
     return (
         <div className='main-page'>
-            <h2>main page</h2>
             <Posts posts={posts}/>
         </div>
     )

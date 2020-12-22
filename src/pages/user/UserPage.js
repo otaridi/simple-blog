@@ -9,11 +9,9 @@ const UserPage = ({match}) => {
     const image = `https://picsum.photos/id/${id}/200`
     const user = users.find(el => el.id === +id)
     const post = posts.filter(el => el.userId === user.id)
-    console.log(post)
-
 
     return (
-        <div>
+        <div className='user-page-container'>
             {
                 user ?
                     <div>
