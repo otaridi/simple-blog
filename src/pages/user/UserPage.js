@@ -11,7 +11,6 @@ const UserPage = ({match}) => {
     const user = users.find(el => el.id === +id)
     // current user posts
     const post = posts.filter(el => el.userId === user?.id)
-    console.log(user)
     return (
         <div className='user-page-container'>
             {

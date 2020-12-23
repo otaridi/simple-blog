@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 import * as api from "../endpoints"
 
-export const Context = createContext([])
+export const Context = createContext(undefined)
 
 const ContextProvider = ({children}) => {
     const [posts] = useFetch(api.POSTS)

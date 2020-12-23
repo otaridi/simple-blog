@@ -22,7 +22,7 @@ body {
     border-bottom: 1px solid #aca8a8;
     position: fixed;
     width: 100%;
-    background-color: #cdc3c3;
+    background-color: #b4cfef;
 }
 
 .nav-container ul li {
@@ -31,6 +31,8 @@ body {
 
 .nav-container ul li a {
     text-decoration: none;
+    font-weight: bold;
+    color: #041134;
 }
 
 /* POSTS */
@@ -135,7 +137,8 @@ body {
 
 .post-info a {
     text-decoration: none;
-    color: #293f6b;
+    font-weight: bold;
+    color: #041134;
 }
 
 /* USER PAGE CONTAINER*/
