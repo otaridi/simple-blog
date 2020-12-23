@@ -3,12 +3,12 @@ import React from "react"
 const Comments = ({comments}) => {
     return (
         <div className='comment-container'>
-            <h1>Comments section</h1>
+            <h3>Comments</h3>
             {
                 comments.map(el => {
                     return <div key={el.id} className='comment'>
-                        <h3>{el.name}</h3>
-                        <h4>{el.body}</h4>
+                        <h4 className='name'>{el.name}</h4>
+                        <h5 className='body'>{el.body}</h5>
                     </div>
                 })
             }

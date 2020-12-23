@@ -2,9 +2,7 @@ import {useEffect, useState} from "react"
 
 const useFetch = (url) => {
     const [state, setState] = useState([])
-
     useEffect(() => {
-        //
         // const fetchData = async () => {
         //     try {
         //         const response = await fetch(url)
@@ -17,7 +15,9 @@ const useFetch = (url) => {
         //     fetchData()
         fetch(url)
             .then(res => res.json())
-            .then(data => setState(data))
+            .then(data => {
+                setState(data)
+            })
             .catch(err => console.log(err))
     }, [])
 

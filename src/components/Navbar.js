@@ -1,17 +1,32 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import {NavLink} from "react-router-dom";
 
-const Navbar = ()=>{
+const Navbar = () => {
+    const navRef = useRef()
+    useEffect(() => {
+        //  navbar scroll effect
+        let prevScrollpos = window.pageYOffset
+        window.onscroll = () => {
+            let currentScrollPos = window.pageYOffset
+            if (prevScrollpos > currentScrollPos) {
+                navRef.current.classList.remove('nav-scroll')
+            } else if (currentScrollPos > 150) {
+                navRef.current.classList.add('nav-scroll')
+            }
+            prevScrollpos = currentScrollPos + 1
+        }
+
+    }, [])
     return (
-            <nav className='nav-container'>
-                <ul>
-                    <li>
-                        <NavLink to='/' >
-                            BLOG
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+        <nav className='nav-container' ref={navRef}>
+            <ul>
+                <li>
+                    <NavLink to='/'>
+                        BLOG
+                    </NavLink>
+                </li>
+            </ul>
+        </nav>
     )
 }
 export default Navbar
