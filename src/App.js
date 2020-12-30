@@ -2,7 +2,7 @@ import React from "react"
 import './styles/App.css';
 import {Route} from 'react-router-dom';
 import MainPage from "./pages/main/MainPage";
-import PostPage from "./pages/post/PostPage";
+import PostPage from "./pages/posts/PostPage";
 import UserPage from "./pages/user/UserPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";

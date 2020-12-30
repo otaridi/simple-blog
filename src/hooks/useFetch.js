@@ -1,14 +1,20 @@
 import {useEffect, useState} from "react"
+import axios from "axios";
 
 const useFetch = (url) => {
     const [state, setState] = useState([])
+
+    async function fetchData() {
+        try{
+            const {data} =  await axios(url)
+            setState(data)
+        }catch (e) {
+            console.log(e)
+        }
+    }
+
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setState(data)
-            })
-            .catch(err => console.log(err))
+        fetchData()
     }, [])
 
     return [state, setState]
