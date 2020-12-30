@@ -208,12 +208,20 @@ body {
 }
 .inputs input{
     margin: 10px;
-    height: 28px;
+    height: 32px;
     padding-left: 10px;
+    border:1px solid #8fa6bc;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 .inputs textarea{
+    border:1px solid #8fa6bc;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
     width: 94%;
-    margin: auto;
+    margin:10px auto;
     padding: 5px 10px;
     height: 60px;
     resize: none;
@@ -264,8 +272,12 @@ body {
 .nav-scroll {
     display: none;
 }
-.warning{
-    background-color: #d28e8e;
+/* new comment field warning */
+.warning-text{
+    display: block;
+    color: #ec4646;
+    height: 20px;
+    margin: 0;
 }
 
 /* MEDIA */
