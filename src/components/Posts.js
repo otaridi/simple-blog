@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Post from "./Post";
 import Spinner from "./Spinner";
 import Button from "./Button";
@@ -12,6 +12,10 @@ const Posts = ({posts}) => {
     const renderPosts = postCount.map(({id, title}) => {
         return <Post key={id} title={title} id={id}/>
     })
+
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+    },[])
 
     return (
         <div>

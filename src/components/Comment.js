@@ -39,7 +39,6 @@ const Comment = ({toggleModal}) => {
     },[name,email,body])
 
     return (
-        <div>
             <div className='comment-inputs-container'>
                 <form onSubmit={formSubmit}>
                     <section className='inputs'>
@@ -57,11 +56,10 @@ const Comment = ({toggleModal}) => {
                     <section className='new-comment-buttons'>
                         <Button onClick={toggleModal} className='cancel-modal'>Close</Button>
                         <Button className='submit-new-comment'
-                                type='submit'>Add</Button>
+                                type='submit'>Submit</Button>
                     </section>
                 </form>
             </div>
-        </div>
     )
 }
 
