@@ -11,6 +11,7 @@ const Posts = ({posts}) => {
     const renderPosts = postCount.map(({id, title}) => {
         return <Post key={id} title={title} id={id}/>
     })
+
     return (
         <div>
             <div className='post-container'>

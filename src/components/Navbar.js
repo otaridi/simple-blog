@@ -3,8 +3,8 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
     const navRef = useRef()
-    useEffect(() => {
-        //  navbar scroll effect
+
+    function navBarScrollEffect(){
         let prevScrollpos = window.pageYOffset
         window.onscroll = () => {
             let currentScrollPos = window.pageYOffset
@@ -15,7 +15,10 @@ const Navbar = () => {
             }
             prevScrollpos = currentScrollPos + 1
         }
+    }
 
+    useEffect(() => {
+        navBarScrollEffect()
     }, [])
     return (
         <nav className='nav-container' ref={navRef}>

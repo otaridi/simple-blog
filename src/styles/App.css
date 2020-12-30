@@ -7,7 +7,10 @@
 body {
     margin: 0;
     padding: 0;
+    /*width: 100vw;*/
+    overflow-x:hidden ;
     font-family: 'Roboto', sans-serif;
+    /*background-color: #ffffff;*/
 }
 
 .main-container {
@@ -207,5 +210,8 @@ body {
 
     .user-container {
         flex-direction: column;
+    }
+    .read-more{
+        visibility: inherit;
     }
 }

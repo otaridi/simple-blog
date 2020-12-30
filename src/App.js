@@ -1,7 +1,6 @@
 import React from "react"
-import './App.css';
+import './styles/App.css';
 import {Route} from 'react-router-dom';
-import ContextProvider from "./context/Context";
 import MainPage from "./pages/main/MainPage";
 import PostPage from "./pages/post/PostPage";
 import UserPage from "./pages/user/UserPage";
@@ -9,9 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
-
     return (
-        <ContextProvider>
         <div className='main-container'>
             <header>
                 <Navbar/>
@@ -21,7 +18,6 @@ function App() {
             <Route path='/user/:id' exact component={UserPage}/>
             <Footer />
         </div>
-        </ContextProvider>
     );
 }
 

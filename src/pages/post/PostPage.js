@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, {useContext, useEffect} from "react"
 import {Context} from "../../context/Context";
 import {NavLink} from "react-router-dom";
 import Comments from "../../components/Comments";
@@ -14,6 +14,10 @@ const PostPage = ({match}) => {
     const user = users.find(el => el.id === post?.userId)
     // current post comments
     const comment =  comments.filter(el => el.postId === +id)
+
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+    },[])
 
     return (
         <div className='post-page-container'>
