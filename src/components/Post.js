@@ -1,6 +1,7 @@
 import React, {useContext} from "react"
 import {NavLink} from "react-router-dom";
 import {Context} from "../context/Context";
+import Button from "./Button";
 
 const Post = ({title, id})=>{
     const {randomImage} = useContext(Context)
@@ -13,7 +14,7 @@ const Post = ({title, id})=>{
             <img src={randomImage(id)} alt="post" className='post-image'/>
             <section className='read-more'>
                 <NavLink to={`/post/${id}`} >
-                    <button>read more</button>
+                    <Button>read more</Button>
                 </NavLink>
             </section>
         </div>

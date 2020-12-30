@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import Post from "./Post";
 import Spinner from "./Spinner";
+import Button from "./Button";
 
 const Posts = ({posts}) => {
     const [currentPosts, setCurrentPosts] = useState(12)
@@ -24,9 +25,11 @@ const Posts = ({posts}) => {
             {
                 currentPosts >= posts.length ? null
                     :
-                    <section className='load-more'>
-                        <button onClick={() => setCurrentPosts(currentPosts + 12)}>load more
-                        </button>
+                    <section>
+                        <Button className='load-more'
+                                onClick={() => setCurrentPosts(currentPosts + 12)} type='button'>
+                            load more
+                        </Button>
                     </section>
             }
         </div>

@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     /*width: 100vw;*/
-    overflow-x:hidden ;
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     /*background-color: #ffffff;*/
 }
@@ -86,14 +86,11 @@ body {
 }
 
 .load-more {
-    width: 90%;
+    width: 120px;
     margin: 20px auto;
     display: flex;
     justify-content: center;
-}
-
-.load-more button {
-    width: 120px;
+    align-items: center;
     height: 30px;
     cursor: pointer;
     color: #2352b0;
@@ -101,7 +98,7 @@ body {
     outline: none;
 }
 
-.load-more button:hover {
+.load-more:hover {
     box-shadow: 1px 0px 10px 0px rgba(109, 103, 103, 0.75);
 }
 
@@ -167,16 +164,66 @@ body {
     padding: 5px;
 }
 
-/* COMMENT SECTION */
+/* COMMENTS SECTION */
 .comment-container {
     width: 94%;
     margin: auto;
     padding-top: 30px;
 }
-
+.comments-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .comment {
     border-bottom: 1px solid #837c7c;
     width: 90%;
+}
+
+.add-comment-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    padding: 5px;
+    cursor: pointer;
+    color: #2352b0;
+    border: 1px solid #d7d4d4;
+    outline: none;
+}
+.add-comment-btn:hover {
+    box-shadow: 0px 0px 4px 0px rgba(109, 103, 103, 0.75);
+}
+/* ADD NEW COMMENT MODAL */
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.submit-new-comment{
+    height: 28px;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    color: #176409;
+    border: 1px solid #d7d4d4;
+    outline: none;
+}
+.cancel-modal{
+    height: 28px;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    color: #7e1022;
+    border: 1px solid #d7d4d4;
+    outline: none;
+}
+.submit-new-comment:hover{
+    color: white;
+    background-color: #5d9f51;
+}
+.cancel-modal:hover{
+    color: white;
+    background-color: #d64444;
 }
 
 /* FOOTER */
@@ -211,7 +258,8 @@ body {
     .user-container {
         flex-direction: column;
     }
-    .read-more{
+
+    .read-more {
         visibility: inherit;
     }
 }
