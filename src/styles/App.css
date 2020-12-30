@@ -212,14 +212,14 @@ body {
     padding-left: 10px;
     border:1px solid #8fa6bc;
     outline: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
 }
 .inputs textarea{
     border:1px solid #8fa6bc;
     outline: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 94%;
     margin:10px auto;
     padding: 5px 10px;

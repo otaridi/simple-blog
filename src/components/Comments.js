@@ -24,8 +24,8 @@ const Comments = ({comments}) => {
                 </Modal>
             ) : null}
             {
-                comments.sort((a,b)=>b.id - a.id).map(el => {
-                    return <div key={el.body} className='comment'>
+                comments.sort((a,b)=>b.id - a.id).map((el,i) => {
+                    return <div key={i} className='comment'>
                         <h4 className='name'>{el.name}</h4>
                         <h5 className='body'>{el.body}</h5>
                     </div>
