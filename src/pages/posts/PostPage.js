@@ -17,7 +17,8 @@ const PostPage = ({match}) => {
 
     useEffect(()=>{
         window.scrollTo(0, 0)
-    },[])
+        document.title = `${user?.name}`
+    },[user])
 
     return (
         <div className='post-page-container'>

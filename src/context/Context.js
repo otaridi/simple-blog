@@ -14,9 +14,13 @@ const ContextProvider = ({children}) => {
     const [comments, setComments] = useFetch(api.COMMENTS)
 
     async function postNewComment(data) {
-        const response = await axios.post(api.COMMENTS, data)
-        const result = await response.data
-        setComments([...comments, result])
+        try{
+            const response = await axios.post(api.COMMENTS, data)
+            const result = await response.data
+            setComments([...comments, result])
+        }catch (error) {
+            console.log(error)
+        }
     }
 
     const randomImage = id => {
