@@ -2,11 +2,12 @@ import React, {useContext} from "react"
 import {Context} from "../../context/Context";
 import Spinner from "../../components/Spinner";
 import Posts from "../../components/Posts";
+import {useParams} from "react-router";
 
-const UserPage = ({match}) => {
+const UserPage = () => {
     const {users, posts, randomImage} = useContext(Context)
     // id form url
-    const {id} = match.params
+    const {id} = useParams()
     // current user
     const user = users.find(el => el.id === +id)
     // current user posts

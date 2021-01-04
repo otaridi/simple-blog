@@ -1,13 +1,13 @@
 import React, {useContext, useEffect} from "react"
 import {Context} from "../../context/Context";
-import {NavLink} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import Comments from "../../components/Comments";
 import Spinner from "../../components/Spinner";
 
-const PostPage = ({match}) => {
+const PostPage = () => {
     const {posts,  users, comments, randomImage} = useContext(Context)
     // id form url
-    const {id} = match.params
+    const {id} = useParams()
     // current post
     const post =  posts.find(el => el.id === +id)
     // current post's user

@@ -9,9 +9,9 @@ export const Context = createContext([[], () => {
 
 
 const ContextProvider = ({children}) => {
-    const [posts] = useFetch(api.POSTS)
-    const [users] = useFetch(api.USERS)
-    const [comments, setComments] = useFetch(api.COMMENTS)
+    const {data:posts} = useFetch(api.POSTS)
+    const {data:users} = useFetch(api.USERS)
+    const {data:comments, setData:setComments} = useFetch(api.COMMENTS)
 
     async function postNewComment(data) {
         try{
