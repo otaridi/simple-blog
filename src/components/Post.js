@@ -2,16 +2,22 @@ import React, {useContext} from "react"
 import {NavLink} from "react-router-dom";
 import {Context} from "../context/Context";
 import Button from "./Button";
+import {Skeleton} from "@material-ui/lab";
 
 const Post = ({title, id})=>{
-    const {randomImage} = useContext(Context)
+    // eslint-disable-next-line no-unused-vars
+    const {randomImage, posts} = useContext(Context)
 
     return (
         <div className='post'>
             <section className='title'>
                 <h3>{title.substr(0,30)}</h3>
             </section>
-            <img src={randomImage(id)} alt="post" className='post-image'/>
+            {
+                posts.length === 0? <Skeleton variant='rect' width={250} height={250} />
+                    :<img src={randomImage(id)} alt="post" style={{width:250, height:250}} className='post-image'/>
+            }
+
             <section className='read-more'>
                 <NavLink to={`/post/${id}`} >
                     <Button>read more</Button>

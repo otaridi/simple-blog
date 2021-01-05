@@ -3,6 +3,7 @@ import {Context} from "../../context/Context";
 import {NavLink, useParams} from "react-router-dom";
 import Comments from "../../components/Comments";
 import Spinner from "../../components/Spinner";
+import {Skeleton} from "@material-ui/lab";
 
 const PostPage = () => {
     const {posts,  users, comments, randomImage} = useContext(Context)
@@ -28,7 +29,10 @@ const PostPage = () => {
                         <div className='current-post'>
                             <section className='post-title'>
                                 <h2>{post.title.substr(0,20)}</h2>
-                                <img src={randomImage(id)} alt="post"/>
+                                {
+                                    posts.length === 0? <Skeleton variant='rect' width={250} height={250} />
+                                        :<img src={randomImage(id)} alt="post" style={{width:250, height:250}} />
+                                }
                             </section>
                             <section className='post-info'>
                                 <NavLink to={`/user/${user.id}`}>

@@ -3,6 +3,7 @@ import {Context} from "../../context/Context";
 import Spinner from "../../components/Spinner";
 import Posts from "../../components/Posts";
 import {useParams} from "react-router";
+import {Skeleton} from "@material-ui/lab";
 
 const UserPage = () => {
     const {users, posts, randomImage} = useContext(Context)
@@ -25,7 +26,10 @@ const UserPage = () => {
                                 <h2>{`${user.address.city} - ${user.address.street} - ${user.address.suite}`}</h2>
                             </section>
                             <section className='user-image'>
-                                <img src={randomImage(id)} alt="user"/>
+                                {
+                                    posts.length === 0? <Skeleton variant='rect' width={250} height={250} />
+                                        :<img src={randomImage(id)} alt="user" style={{width:250, height:250}} />
+                                }
                             </section>
                         </section>
                         <h2>related posts from {user.name}</h2>
