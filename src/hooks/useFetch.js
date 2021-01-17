@@ -3,11 +3,13 @@ import axios from "axios";
 
 const useFetch = (url) => {
     const [data, setData] = useState([])
+    const [loading,setLoading] = useState(false)
 
     async function fetchData() {
         try{
             const {data} =  await axios(url)
             setData(data)
+            setLoading(true)
         }catch (e) {
             console.log(e)
         }
@@ -17,7 +19,7 @@ const useFetch = (url) => {
         fetchData()
     }, [])
 
-    return {data, setData}
+    return [data,loading, setData]
 }
 
 export default useFetch

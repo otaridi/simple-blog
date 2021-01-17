@@ -4,7 +4,6 @@ import Comment from "./Comment";
 import Button from "./Button";
 
 const Comments = ({comments}) => {
-    // console.log(comments)
     const [showModal, setShowModal] = useState(false)
     const toggleModal = () => setShowModal(!showModal)
     return (
@@ -24,7 +23,7 @@ const Comments = ({comments}) => {
                 </Modal>
             ) : null}
             {
-                comments.sort((a,b)=>b.id - a.id).map((el,i) => {
+                comments.map((el,i) => {
                     return <div key={i} className='comment'>
                         <h4 className='name'>{el.name}</h4>
                         <h5 className='body'>{el.body}</h5>

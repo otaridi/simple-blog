@@ -304,3 +304,8 @@ body {
         visibility: inherit;
     }
 }
+.page-not-found{
+   padding-top: 100px;
+    text-align: center;
+    margin: 0;
+}
